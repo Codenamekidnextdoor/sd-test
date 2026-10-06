@@ -187,15 +187,3 @@ Common query parameters across metric endpoints: `path`, `author`, `from`, `to`,
 | `GET` | `/api/repositories/:id/metrics/commit-set` | Commit-set aggregates (time range or manual selection) |
 | `GET` | `/api/repositories/:id/metrics/author` | Author modifications, churn, and ownership |
 
-## Rubric Tier Strategy
-
-- **25%**: Some metrics + one ingestion method
-- **50%**: All metrics + both ingestion methods
-- **75%**: + filtering, author merge, or multi-repo
-- **100%**: All features
-
-## Test Repositories
-
-- cJSON: https://github.com/DaveGamble/cJSON.git
-- Redis: https://github.com/redis/redis.git
-- Git: https://github.com/git/git.git
