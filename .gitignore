@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+.env
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+backend/repos/
+.verify-cJSON/
+backend/data/*.db
+.DS_Store
+*.log
+.vscode/
+.idea/

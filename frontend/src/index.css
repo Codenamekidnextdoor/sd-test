@@ -1,0 +1,200 @@
+/* RAT — global styles. Ink & teal engineering-console aesthetic. */
+
+:root {
+  --rat-ink: #0c1424;
+  --rat-ink-soft: #16223a;
+  --rat-bg: #f4f6f9;
+  --rat-teal: #0f766e;
+  --rat-teal-soft: #ccfbf1;
+  --rat-amber: #d97706;
+  --rat-red: #dc2626;
+  --rat-green: #16a34a;
+  --rat-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--rat-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Sidebar brand ---- */
+.rat-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px 14px;
+  color: #e6edf7;
+}
+
+.rat-brand__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--rat-teal);
+  color: #ffffff;
+  font-family: var(--rat-mono);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  flex: 0 0 auto;
+}
+
+.rat-brand__text {
+  line-height: 1.15;
+}
+
+.rat-brand__title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #f4f7fb;
+}
+
+.rat-brand__sub {
+  font-size: 11px;
+  color: #7d8ba3;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+/* ---- Sidebar ---- */
+.rat-sider .ant-menu {
+  border-inline-end: none !important;
+  background: transparent;
+}
+
+.rat-sider .ant-menu-item-group-title {
+  color: #64748b;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* ---- Header ---- */
+.rat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #e5e9f0;
+}
+
+.rat-header__title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.rat-header__title em {
+  font-style: normal;
+  font-weight: 400;
+  color: #64748b;
+}
+
+/* ---- Mono numerals for statistics ---- */
+.rat-stat .ant-statistic-content {
+  font-family: var(--rat-mono);
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  font-size: 26px;
+}
+
+.rat-stat--compact .ant-statistic-content {
+  font-size: 20px;
+}
+
+/* ---- Chart tooltips ---- */
+.rat-tooltip {
+  background: #0c1424;
+  color: #e6edf7;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: var(--rat-mono);
+  font-size: 12px;
+  box-shadow: 0 8px 24px rgba(12, 20, 36, 0.35);
+}
+
+.rat-tooltip__label {
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+/* ---- Directory tree ---- */
+.rat-tree .ant-tree-node-content-wrapper {
+  width: 100%;
+}
+
+.rat-tree-node {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+}
+
+.rat-tree-node__name {
+  font-family: var(--rat-mono);
+  font-size: 13px;
+}
+
+.rat-tree-node__meta {
+  margin-left: auto;
+  font-size: 11px;
+  color: #64748b;
+  font-family: var(--rat-mono);
+  padding-right: 8px;
+}
+
+.rat-num {
+  font-family: var(--rat-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.rat-pos {
+  color: var(--rat-green);
+}
+
+.rat-neg {
+  color: var(--rat-red);
+}
+
+/* ---- Scrollbars ---- */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #c4ccd8;
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---- Page entrance ---- */
+@keyframes rat-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rat-page {
+  animation: rat-rise 0.35s ease-out both;
+}
